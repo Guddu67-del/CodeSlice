@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+/* JOIN PAGE */
+.join-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.join-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.join-form h1 {
+  margin-bottom: 1.2rem;
+}
+
+.join-form input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.join-form button {
+  width: 100%;
+  padding: 0.7rem;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* MAIN LAYOUT */
+.editor-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  padding: 1.5rem;
+  background: #2c3e50;
+  color: white;
+}
+
+.room-info {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.copy-button {
+  background: #3498db;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.copy-success {
+  display: block;
+  font-size: 0.8rem;
+  color: lightgreen;
+  margin-top: 0.3rem;
+}
+
+.sidebar h3 {
+  margin-top: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  background: gray;
+  padding: 0.4rem;
+  margin-top: 0.4rem;
+  border-radius: 4px;
+}
+
+/* CHAT */
+.sidebar-chat {
+  margin-top: 0.5rem;
+}
+
+.chat-messages {
+  background: #f1f5f9;
+  color: #111;
+  padding: 0.5rem;
+  height: 120px;
+  overflow-y: auto;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+}
+
+.sidebar-chat input {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.sidebar-chat button {
+  width: 100%;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 4px;
+}
+
+/* EDITOR */
+.editor-wrapper {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* allow flex children to shrink so controls stay visible */
+}
+
+.editor-area {
+  flex: 1;
+  min-height: 0; /* important for proper flexbox overflow handling */
+  display: flex;
+}
+
+.controls-panel {
+  height: 260px; /* fixed area for stdin + output so editor keeps max space */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+
+.stdin-row {
+  display: flex;
+  flex-direction: column; /* stack input and button */
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.run-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* keep button under input, left aligned */
+}
+
+.output-console {
+  width: 100%;
+  padding: 0.6rem;
+  font-family: monospace;
+  background: #0b0b0b;
+  color: #ffffff;
+  caret-color: #ffffff;
+  border-radius: 6px;
+  height: 180px; /* keep output visible without pushing page */
+  resize: none;
+  overflow: auto; /* internal scrolling if output is large */
+  font-size: 0.95rem;
+}
+
+.stdin-input {
+  flex: 1;
+  padding: 0.45rem;
+  font-family: monospace;
+  height: 60px; /* smaller input box */
+  resize: none;
+}
+
+.run-button {
+  margin-top: 0;
+  padding: 0.5rem;
+  background: #0cd126;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.language-selector {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: #34495e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.leave-button {
+  margin-top: 1rem;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.typing-indicator {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #ddd;
+}
